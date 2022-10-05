@@ -9,4 +9,7 @@ args = parser.parse_args()
 
 func = getattr(operator, args.func, None)
 
-print(func(args.num1, args.num2)) if func else print("Func name is not correct")
+try:
+    print(func(args.num1, args.num2)) if func else print("Func name is not correct")
+except ZeroDivisionError:
+    print("You can't divide by zero")
