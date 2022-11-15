@@ -35,7 +35,7 @@ class Group:
         if len(self.students) <= self.max_students:
             self.students.append(student)
         else:
-            raise ValueError(f"Can't add student ${student}, group if fullfield")
+            raise ValueError(f"Can't add student ${student}, group if fulfilled")
 
     def top_students(self):
         self.students.sort(key=lambda student: -student.rating)
